@@ -13,6 +13,9 @@ export class AppComponent {
   public items: Array<Item>;
 
   constructor (private _dataService: DataService) {
-    this.items = _dataService.getItems();
+  }
+
+  generateList() {
+    this.items = this._dataService.getItems();
   }
 }
