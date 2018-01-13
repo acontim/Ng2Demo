@@ -9,6 +9,7 @@ import {Item} from './shared/list/list.model';
 })
 export class AppComponent {
   title = 'app';
+  header = 'supershop';
   public items: Array<Item>;
 
   constructor (private _dataService: DataService) {
