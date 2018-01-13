@@ -8,8 +8,7 @@ import {Item} from './shared/list/list.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  header = 'supershop';
+  public header = 'supershop';
   public items: Array<Item>;
 
   constructor (private _dataService: DataService) {
