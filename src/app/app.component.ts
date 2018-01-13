@@ -10,15 +10,21 @@ import {Item} from './shared/list/list.model';
 export class AppComponent {
   public header = 'supershop';
   public items: Array<Item>;
+  private reverse = false;
 
   constructor (private _dataService: DataService) {
   }
 
   generateList() {
     this.items = this._dataService.getItems();
+    if (this.reverse) {
+      this.items.reverse();
+      this.reverse = false;
+    }
   }
 
   reverseList() {
+    this.reverse = !this.reverse;
     this.items.reverse();
   }
 }
