@@ -18,4 +18,8 @@ export class AppComponent {
   generateList() {
     this.items = this._dataService.getItems();
   }
+
+  reverseList() {
+    this.items.reverse();
+  }
 }
