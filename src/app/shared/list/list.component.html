@@ -1,6 +1,6 @@
-<div style="margin-left: 10px; margin-bottom: 10px;">
+<div>
 <ul>
   <li [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{ item.id | product }} - {{ item.description }}</li>
 </ul>
-<button [hidden]="!itemList" style="margin-left:20px">Reverse list</button>
+<button [hidden]="!itemList">Reverse list</button>
 </div>
