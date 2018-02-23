@@ -5,3 +5,8 @@ div {
 button {
   margin-left:20px;
 }
+
+li{
+  cursor: pointer;
+  border: 1px solid black;
+}
