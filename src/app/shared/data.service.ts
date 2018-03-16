@@ -1,29 +1,30 @@
 import {Injectable} from '@angular/core';
-import {Item} from './list/list.model';
+
+import { HttpClient } from '@angular/common/http';
+
+import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
 
-  private items: Array<Item> = [
-    {
-      id: 1,
-      description: 'Grog'
-    },
-    {
-      id: 2,
-      description: 'Tomacco'
-    },
-    {
-      id: 3,
-      description: 'Szechuan sauce'
-    }
-  ];
+  constructor(private httpClient: HttpClient) { }
 
-  getItems(): Array<Item> {
-    return this.items;
+  get(path: string): Observable<any> {
+    return this.httpClient.get(environment.API + path);
   }
 
-  addItem(item: Item): void {
-    this.items.push(item);
+  post(path: string, data: any): Observable<any> {
+    const body: string = JSON.stringify(data);
+    return this.httpClient.post(environment.API + path, body);
+  }
+
+  put(path: string, data: any): Observable<any> {
+    const body: string = JSON.stringify(data);
+    return this.httpClient.put(environment.API + path, body);
+  }
+
+  delete(path: string): Observable<any> {
+    return this.httpClient.delete(environment.API + path);
   }
 }
