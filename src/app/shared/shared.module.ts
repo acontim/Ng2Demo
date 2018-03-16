@@ -6,10 +6,12 @@ import {HeaderComponent} from './header/header.component';
 import {ListComponent} from './list/list.component';
 import {DataService} from './data.service';
 import {ProductPipe} from './pipes/product.pipe';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
+    FooterComponent,
     ListComponent,
     ProductPipe
   ],
@@ -21,6 +23,7 @@ import {ProductPipe} from './pipes/product.pipe';
     CommonModule,
     FormsModule,
     HeaderComponent,
+    FooterComponent,
     ListComponent,
     ProductPipe
   ],

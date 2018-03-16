@@ -9,6 +9,8 @@ import {Item} from './shared/list/list.model';
 })
 export class AppComponent {
   public header = 'supershop';
+  public footer = 'supershop';
+  public date = Date.now();
   public items: Array<Item>;
   private reverse = false;
 
