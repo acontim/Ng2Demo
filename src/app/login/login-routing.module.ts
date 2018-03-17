@@ -19,4 +19,4 @@ import {LoginComponent} from './login.component';
   ],
   exports: [RouterModule]
 })
-export class ProductRoutingModule { }
+export class LoginRoutingModule { }
