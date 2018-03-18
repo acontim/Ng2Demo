@@ -12,4 +12,8 @@ export class AuthService {
   logout() {
     this.logged = false;
   }
+
+  isLogged() {
+    return this.logged;
+  }
 }
