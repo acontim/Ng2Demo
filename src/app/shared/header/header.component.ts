@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {AuthService} from '../services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import {AuthService} from '../services/auth.service';
 export class HeaderComponent {
   @Input() header: string;
 
-  constructor(private _authService: AuthService) { }
+  constructor(private _authService: AuthService, private _router: Router) { }
 
   logout() {
     this._authService.logout();
@@ -17,5 +18,13 @@ export class HeaderComponent {
 
   isLogged() {
     return this._authService.isLogged();
+  }
+
+  toProducts() {
+    this._router.navigate(['/products']);
+  }
+
+  toShops() {
+    this._router.navigate(['/shops']);
   }
 }

@@ -2,5 +2,9 @@
   <h1>
    {{ header | uppercase }}
   </h1>
-  <button [hidden]="!isLogged()" (click)="logout()">LOGOUT</button>
+  <div [hidden]="!isLogged()">
+    <button (click)="toProducts()">PRODUCTS</button>
+    <button (click)="toShops()">SHOPS</button>
+    <button (click)="logout()">LOGOUT</button>
+  </div>
 </header>
