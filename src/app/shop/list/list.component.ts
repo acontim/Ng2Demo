@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
 
   navigate(id: number) {
     if (id) {
-      this._router.navigate(['/products/detail/', id]);
+      this._router.navigate(['shops/detail/', id]);
     }
   }
 

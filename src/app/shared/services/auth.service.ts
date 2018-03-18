@@ -11,13 +11,13 @@ export class AuthService {
   login() {
     this.logged = true;
     console.log(this.logged);
-    this._router.navigate(['\products']);
+    this._router.navigate(['/products']);
   }
 
   logout() {
     this.logged = false;
     console.log(this.logged);
-    this._router.navigate(['\login']);
+    this._router.navigate(['/login']);
   }
 
   isLogged() {
