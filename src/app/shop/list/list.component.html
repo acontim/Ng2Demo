@@ -1,4 +1,3 @@
-<ul>
-  <li (click)="navigate(1)">Shop Item 1</li>
-  <li (click)="navigate(2)">Shop Item 2</li>
-</ul>
+<app-common-list [itemList]="items"
+                 (clickRow)="navigate($event)" (reverseList)="reverse()">
+</app-common-list>
