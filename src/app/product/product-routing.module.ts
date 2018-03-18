@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {ProductComponent} from './product.component';
 import {ListComponent} from './list/list.component';
+import {AuthGuardService} from '../shared/services/auth-guard.service';
 
 @NgModule({
   imports: [
@@ -10,7 +11,7 @@ import {ListComponent} from './list/list.component';
         component: ProductComponent,
         path: 'products',
         canActivate: [
-          // AuthGuardService
+          AuthGuardService
         ],
         children: [
           { path: '', redirectTo: 'list', pathMatch: 'full' },
