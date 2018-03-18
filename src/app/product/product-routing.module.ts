@@ -3,6 +3,7 @@ import {RouterModule} from '@angular/router';
 import {ProductComponent} from './product.component';
 import {ListComponent} from './list/list.component';
 import {AuthGuardService} from '../shared/services/auth-guard.service';
+import {DetailComponent} from './detail/detail.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import {AuthGuardService} from '../shared/services/auth-guard.service';
           { path: '', redirectTo: 'list', pathMatch: 'full' },
           { path: 'detail', redirectTo: 'list', pathMatch: 'full' },
           { path: 'list', component: ListComponent },
+          { path: 'detail/:id', component: DetailComponent }
         ]
       }
     ])
