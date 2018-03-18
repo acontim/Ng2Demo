@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../shared/services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _authService: AuthService, private _router: Router) { }
+
+  login() {
+    this._authService.login();
+    console.log(this._authService.isLogged());
+    this._router.navigate(['/products']);
+  }
 
   ngOnInit() {
   }
