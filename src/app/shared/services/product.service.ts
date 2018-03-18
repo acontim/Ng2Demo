@@ -2,7 +2,7 @@ import {DataService} from './data.service';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
 
-const PRODUCT_LIST = 'product';
+const PRODUCT_LIST = 'product/';
 import 'rxjs/add/operator/map';
 import {Product} from '../domain/product';
 
@@ -21,5 +21,9 @@ export class ProductService {
         };
         });
       });
+  }
+
+  getProduct(id: number): Observable<Product> {
+    return this._dataService.get(PRODUCT_LIST + id);
   }
 }
