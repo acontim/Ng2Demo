@@ -2,4 +2,5 @@
   <h1>
    {{ header | uppercase }}
   </h1>
+  <button [hidden]="!isLogged()" (click)="logout()">LOGOUT</button>
 </header>
