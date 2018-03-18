@@ -13,8 +13,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     this._authService.login();
-    console.log(this._authService.isLogged());
-    this._router.navigate(['/products']);
   }
 
   ngOnInit() {
