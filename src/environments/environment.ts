@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  API: 'http://weblogic.innocv.com/curso-angular-api/api/'
+  API: 'http://localhost:8080/curso-angular-api/api/'
 };

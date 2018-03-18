@@ -1,6 +1,6 @@
 <div>
 <ul>
-  <li [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{ item.id | product }} - {{ item.description }}</li>
+  <li (click)="click(item)" [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{ item.id | product }} - {{ item.description }}</li>
 </ul>
-<button [hidden]="!itemList" (click)="emitEvent()">Reverse list</button>
+<button [hidden]="!itemList" (click)="reverse()">Reverse list</button>
 </div>
